@@ -13,6 +13,6 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: 'precilytask2api-staging'
+          heroku_app_name: 'precily-task2-api'
           heroku_email: 'hkrhasan8010@gmail.com'
           usedocker: true
