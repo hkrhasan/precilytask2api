@@ -16,6 +16,3 @@ jobs:
           heroku_app_name: 'precily-task2-api' #Must be unique in Heroku
           heroku_email: 'hkrhasan8010@gmail.com'
           usedocker: true
-        env:
-          NODE_ENV: production
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
