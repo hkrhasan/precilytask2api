@@ -28,7 +28,7 @@ COPY --chown=node:node . .
 RUN npm run prisma:generate
 
 # Push migration on remote db
-RUN npm run prisma:dbpush
+# RUN npm run prisma:dbpush
 
 
 # Use the node user from the image (instead of the root user)
