@@ -15,14 +15,11 @@ WORKDIR /usr/src/app
 COPY --chown=node:node package*.json ./
 
 # Install app dependencies using the `npm ci` command instead of `npm install`
-RUN npm ci --legacy-peer-deps
+RUN npm ci
 
 # Bundle app source
 COPY --chown=node:node . .
 
-
-# # Initialize production database 
-# ENV DATABASE_URL 
 
 # Generate prisma client
 RUN npm run prisma:generate
