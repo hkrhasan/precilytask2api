@@ -1,21 +1,14 @@
 services:
   api:
-    image: hkrhasan8010/task2_api:latest
     build:
-      # dockerfile: Dockerfile
+      dockerfile: Dockerfile
       context: .
       # Only will build development stage from our dockerfile
       target: ${NODE_ENV}
-    container_name: hkr-nestjs-starter-app
 
     volumes:
       - .:/usr/src/app
 
-    env_file:
-      - .env
-    environment:
-      - DATABASE_URL=${PRODUCTION_DATABASE_URL}
-      - NODE_ENV=${PRODUCTION_NODE_ENV}
     # Run a command against the development stage of the image
     command: npm run start:dev
     ports:
